@@ -1,0 +1,23 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Electron chat app + preprocessing pipeline",
+  "main": "src/main.js",
+  "scripts": {
+    "preinstall": "node ./scripts/setup_python_env.js",
+    "postinstall": "echo \"Node deps installed; Python env handled by preinstall/postinstall script.\"",
+    "preprocess": ".venv\\Scripts\\python src/preprocessing.py",
+    "start": "npm run preprocess && electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^39.0.0"
+  },
+  "dependencies": {
+    "node-nlp": "^5.0.0-alpha.5"
+  }
+}
