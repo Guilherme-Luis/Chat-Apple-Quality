@@ -1,0 +1,26 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Electron app + preprocessing / training pipeline (Python)",
+  "main": "src/electron_main.js",
+  "type": "commonjs",
+  "scripts": {
+    "env": "node ./scripts/setup_python_env.js",
+    "preprocess": "node ./scripts/run_preprocess.js",
+    "train": "node ./scripts/run_train.js",
+    "postprocess": "node ./scripts/run_postprocess.js",
+    "bundle": "node ./scripts/bundle_pipeline.js",
+    "start": "npm run env && npm run preprocess && npm run train && npm run postprocess && npm run bundle && electron .",
+    "dev": "electron .",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^25.0.0"
+  },
+  "dependencies": {
+    "node-nlp": "^5.0.0-alpha.5"
+  }
+}
