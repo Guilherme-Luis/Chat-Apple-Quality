@@ -2,3 +2,4 @@ node_modules/
 .venv/
 \venv
 ml/.ipynb_checkpoints
+ml/Extração_Padrão.ipynb
